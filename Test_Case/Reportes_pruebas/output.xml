@@ -1,89 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-23T16:07:26.120905" rpa="false" schemaversion="5">
-<suite id="s1" name="Buttons" source="D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\Test_Case\Buttons.robot">
-<test id="s1-t1" name="Practica Primer Nivel ComboBox" line="48">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-26T10:53:58.201227" rpa="false" schemaversion="5">
+<suite id="s1" name="FormularioPrac3" source="D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\Test_Case\FormularioPrac3.robot">
+<test id="s1-t1" name=" Practica 3 Formulario" line="10">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-23T16:07:26.259719" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/select-menu'.</msg>
-<msg time="2024-08-23T16:07:26.662470" level="WARN">The chromedriver version (126.0.6478.126) detected in PATH at C:\Chromedriver\chromedriver\chromedriver.exe might not be compatible with the detected chrome version (127.0.6533.120); currently, chromedriver 127.0.6533.119 is recommended for chrome 127.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>https://demoqa.com/select-menu</arg>
+<msg time="2024-08-26T10:53:58.341682" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<msg time="2024-08-26T10:53:58.720890" level="WARN">The chromedriver version (126.0.6478.126) detected in PATH at C:\Chromedriver\chromedriver\chromedriver.exe might not be compatible with the detected chrome version (127.0.6533.120); currently, chromedriver 127.0.6533.119 is recommended for chrome 127.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-23T16:07:26.259719" elapsed="23.996919"/>
+<status status="PASS" start="2024-08-26T10:53:58.341682" elapsed="26.134149"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-23T16:07:50.257405" elapsed="0.023141"/>
+<status status="PASS" start="2024-08-26T10:54:24.476536" elapsed="0.024535"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-23T16:07:50.292340" level="INFO">Page title is 'DEMOQA'.</msg>
+<msg time="2024-08-26T10:54:24.505267" level="INFO">Page title is 'DEMOQA'.</msg>
 <arg>DEMOQA</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-08-23T16:07:50.281593" elapsed="0.010747"/>
+<status status="PASS" start="2024-08-26T10:54:24.501225" elapsed="0.004042"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-23T16:07:51.294028" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-23T16:07:50.293347" elapsed="1.000681"/>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-08-26T10:54:24.505267" elapsed="0.001003"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>.1s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-08-26T10:54:24.506270" elapsed="0.000000"/>
+</kw>
+<kw name="Rellenar formulario">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:24.508267" level="INFO">Typing text 'yeni' into text field 'id=firstName'.</msg>
+<arg>id=firstName</arg>
+<arg>yeni</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:24.508267" elapsed="0.405145"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:24.913412" level="INFO">Typing text 'alfaro' into text field 'id=lastName'.</msg>
+<arg>id=lastName</arg>
+<arg>alfaro</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:24.913412" elapsed="0.419676"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:25.333088" level="INFO">Typing text 'yav@gmail.com' into text field 'id=userEmail'.</msg>
+<arg>id=userEmail</arg>
+<arg>yav@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:25.333088" elapsed="0.403339"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:25.736926" level="INFO">Typing text '1234567891' into text field 'id=userNumber'.</msg>
+<arg>id=userNumber</arg>
+<arg>1234567891</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:25.736926" elapsed="0.454476"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:26.191402" level="INFO">Typing text 'Prueba de dirección' into text field 'id=currentAddress'.</msg>
+<arg>id=currentAddress</arg>
+<arg>Prueba de dirección</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:26.191402" elapsed="0.412266"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>Xpath=(//div[contains(@class,' css-tlfecz-indicatorContainer')])[1]</arg>
-<arg>2s</arg>
+<arg>Xpath=(//label[contains(@class,'custom-control-label')])[2]</arg>
+<arg>0.5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-23T16:07:51.294977" elapsed="0.044240"/>
+<status status="PASS" start="2024-08-26T10:54:26.603668" elapsed="0.236893"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-23T16:07:51.340219" level="INFO">Clicking element 'Xpath=(//div[contains(@class,' css-tlfecz-indicatorContainer')])[1]'.</msg>
-<arg>Xpath=(//div[contains(@class,' css-tlfecz-indicatorContainer')])[1]</arg>
+<msg time="2024-08-26T10:54:26.841687" level="INFO">Clicking element 'Xpath=(//label[contains(@class,'custom-control-label')])[2]'.</msg>
+<arg>Xpath=(//label[contains(@class,'custom-control-label')])[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-23T16:07:51.340219" elapsed="0.059400"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-23T16:07:51.900172" level="INFO">Slept 500 milliseconds.</msg>
-<arg>0.5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-23T16:07:51.400118" elapsed="0.500054"/>
+<status status="PASS" start="2024-08-26T10:54:26.840561" elapsed="0.264867"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//div[text()='Group 1, option 1']</arg>
+<arg>Xpath=//input[@id='dateOfBirthInput']</arg>
+<arg>0.5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T10:54:27.105428" elapsed="0.226645"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:27.333073" level="INFO">Clicking element 'Xpath=//input[@id='dateOfBirthInput']'.</msg>
+<arg>Xpath=//input[@id='dateOfBirthInput']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:27.332073" elapsed="0.294177"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>Xpath=//div[contains(@class,'react-datepicker__day react-datepicker__day--026 react-datepicker__day--selected react-datepicker__day--today')]</arg>
+<arg>0.5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T10:54:27.626250" elapsed="0.226410"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:27.853657" level="INFO">Executing JavaScript:
+window.scrollTo(0,200)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-26T10:54:27.852660" elapsed="0.114112"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@class='subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3']</arg>
+<arg>0.5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T10:54:27.966772" elapsed="0.223474"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:28.190246" level="INFO">Clicking element 'xpath=//div[@class='subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3']'.</msg>
+<arg>xpath=//div[@class='subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:28.190246" elapsed="0.251164"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:28.441918" level="INFO">Typing text 'Chemistry' into text field 'id=subjectsInput'.</msg>
+<arg>id=subjectsInput</arg>
+<arg>Chemistry</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:28.441410" elapsed="0.387595"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:28.829005" level="INFO">Sending key(s) ('ENTER',) to id=subjectsInput element.</msg>
+<msg time="2024-08-26T10:54:29.306076" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-08-26T10:54:29.306076" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=subjectsInput</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-08-26T10:54:28.829005" elapsed="0.590600"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>Xpath=//label[@for='hobbies-checkbox-2'][contains(.,'Reading')]</arg>
+<arg>0.5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T10:54:29.419605" elapsed="0.223951"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:29.643556" level="INFO">Clicking element 'Xpath=//label[@for='hobbies-checkbox-2'][contains(.,'Reading')]'.</msg>
+<arg>Xpath=//label[@for='hobbies-checkbox-2'][contains(.,'Reading')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:29.643556" elapsed="0.240513"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:input[type="file"]</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T10:54:29.884069" elapsed="0.244979"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-08-26T10:54:30.129551" level="INFO">${image_path} = D:\Users\yenifer.alfaro\Downloads\images.png</msg>
+<var>${image_path}</var>
+<arg>D:\\Users\\yenifer.alfaro\\Downloads\\images.png</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-08-26T10:54:30.129551" elapsed="0.000000"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:30.130612" level="INFO">Sending D:\Users\yenifer.alfaro\Downloads\images.png to browser.</msg>
+<arg>css:input[type="file"]</arg>
+<arg>${image_path}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:30.130612" elapsed="0.240853"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:30.372489" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-08-26T10:54:30.371465" elapsed="0.113229"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=(//div[contains(@class,' css-1hwfws3')])[2]</arg>
+<arg>1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-26T10:54:30.484694" elapsed="0.249144"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:30.734871" level="INFO">Clicking element 'xpath=(//div[contains(@class,' css-1hwfws3')])[2]'.</msg>
+<arg>xpath=(//div[contains(@class,' css-1hwfws3')])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:30.733838" elapsed="0.257669"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[text()='Uttar Pradesh']</arg>
 <arg>10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-23T16:07:51.900522" elapsed="0.032385"/>
+<status status="PASS" start="2024-08-26T10:54:30.991507" elapsed="0.240284"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-23T16:07:51.933908" level="INFO">Clicking element 'xpath=//div[text()='Group 1, option 1']'.</msg>
-<arg>xpath=//div[text()='Group 1, option 1']</arg>
+<msg time="2024-08-26T10:54:31.232791" level="INFO">Clicking element 'xpath=//div[text()='Uttar Pradesh']'.</msg>
+<arg>xpath=//div[text()='Uttar Pradesh']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-23T16:07:51.933408" elapsed="0.057037"/>
+<status status="PASS" start="2024-08-26T10:54:31.231791" elapsed="0.256323"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-26T10:54:31.489244" level="INFO">Clicking button 'Xpath=//button[@type='submit']'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-26T10:54:31.488114" elapsed="0.592822"/>
+</kw>
+<status status="PASS" start="2024-08-26T10:54:24.507277" elapsed="7.574162"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-23T16:07:53.991873" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-08-26T10:54:34.083334" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-23T16:07:51.991444" elapsed="2.000429"/>
+<status status="PASS" start="2024-08-26T10:54:32.083213" elapsed="2.000121"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-23T16:07:53.992895" elapsed="2.189242"/>
+<status status="PASS" start="2024-08-26T10:54:34.084105" elapsed="2.288682"/>
 </kw>
-<doc>ComboBox</doc>
-<tag>test_ComboB</tag>
-<status status="PASS" start="2024-08-23T16:07:26.258717" elapsed="29.924636"/>
+<doc>prueba</doc>
+<tag>prueba_1</tag>
+<status status="PASS" start="2024-08-26T10:53:58.341682" elapsed="38.032005"/>
 </test>
-<status status="PASS" start="2024-08-23T16:07:26.121906" elapsed="30.064527"/>
+<status status="PASS" start="2024-08-26T10:53:58.203209" elapsed="38.172479"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">test_ComboB</stat>
+<stat pass="1" fail="0" skip="0">prueba_1</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Buttons">Buttons</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="FormularioPrac3">FormularioPrac3</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-08-23T16:07:26.662470" level="WARN">The chromedriver version (126.0.6478.126) detected in PATH at C:\Chromedriver\chromedriver\chromedriver.exe might not be compatible with the detected chrome version (127.0.6533.120); currently, chromedriver 127.0.6533.119 is recommended for chrome 127.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-08-26T10:53:58.720890" level="WARN">The chromedriver version (126.0.6478.126) detected in PATH at C:\Chromedriver\chromedriver\chromedriver.exe might not be compatible with the detected chrome version (127.0.6533.120); currently, chromedriver 127.0.6533.119 is recommended for chrome 127.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
