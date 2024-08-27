@@ -2,20 +2,19 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}      https://demoqa.com/automation-practice-form
-${BROWSER}    chrome
 ${SUBMIT_BUTTON}    Xpath=//button[@type='submit']
 
 *** Test Cases ***
- Practica 3 Formulario
-    [Documentation]     prueba
-    [Tags]      prueba_1
-    llenar Formulario
-    sleep    2
-    close browser
+ #Practica 3 Formulario
+    #[Documentation]     prueba
+    #[Tags]      prueba_1
+    #llenar Formulario
+    #sleep    2
+    #close browser
 
 *** Keywords ***
 abrir navegador
+    [Arguments]    ${URL}     ${BROWSER}
     open browser    ${URL}     ${BROWSER}
     maximize browser window
     title should be    DEMOQA

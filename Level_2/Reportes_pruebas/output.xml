@@ -1,293 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-26T16:46:50.130105" rpa="false" schemaversion="5">
-<suite id="s1" name="Keyword" source="D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\Level_2\Keyword.robot">
-<test id="s1-t1" name=" Practica 3 Formulario" line="11">
-<kw name="Abrir Navegador" owner="Keywords_BasicForm">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:46:50.290345" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<msg time="2024-08-26T16:46:50.723762" level="WARN">The chromedriver version (126.0.6478.126) detected in PATH at C:\Chromedriver\chromedriver\chromedriver.exe might not be compatible with the detected chrome version (127.0.6533.120); currently, chromedriver 127.0.6533.119 is recommended for chrome 127.*, so it is advised to delete the driver in PATH and retry</msg>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-27T07:54:21.689756" rpa="false" schemaversion="5">
+<suite id="s1" name="Keyword" source="D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\level_2\Keyword.robot">
+<test id="s1-t1" name=" Practica 3 Formulario" line="12">
+<kw name="abrir Navegador">
+<msg time="2024-08-27T07:54:21.857990" level="FAIL">No keyword with name 'abrir Navegador' found.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-26T16:46:50.290345" elapsed="25.335944"/>
+<status status="FAIL" start="2024-08-27T07:54:21.857990" elapsed="0.000000">No keyword with name 'abrir Navegador' found.</status>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-26T16:47:15.626289" elapsed="0.032163"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:15.672667" level="INFO">Page title is 'DEMOQA'.</msg>
-<arg>DEMOQA</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-08-26T16:47:15.658452" elapsed="0.014215"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>10</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-08-26T16:47:15.672667" elapsed="0.001162"/>
-</kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>.1s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-08-26T16:47:15.673829" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-08-26T16:46:50.290345" elapsed="25.383484"/>
-</kw>
-<kw name="Rellenar formulario" owner="Keywords_BasicForm">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:15.674833" level="INFO">Typing text 'Jesus' into text field 'id=firstName'.</msg>
-<arg>id=firstName</arg>
-<arg>${name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:15.674833" elapsed="0.407785"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:16.083621" level="INFO">Typing text 'Alfaro' into text field 'id=lastName'.</msg>
-<arg>id=lastName</arg>
-<arg>${last_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:16.082618" elapsed="0.395905"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:16.479738" level="INFO">Typing text 'JAV@gmail.com' into text field 'id=userEmail'.</msg>
-<arg>id=userEmail</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:16.478523" elapsed="0.452274"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:16.930797" level="INFO">Typing text '1234567891' into text field 'id=userNumber'.</msg>
-<arg>id=userNumber</arg>
-<arg>1234567891</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:16.930797" elapsed="0.404233"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:17.335030" level="INFO">Typing text 'Prueba de dirección' into text field 'id=currentAddress'.</msg>
-<arg>id=currentAddress</arg>
-<arg>Prueba de dirección</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:17.335030" elapsed="0.430369"/>
-</kw>
-<kw name="Cliquear elemento 1s" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH}</arg>
-<arg>1s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-26T16:47:17.765399" elapsed="0.247362"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:18.012761" level="INFO">Clicking element '(//label[contains(@class,'custom-control-label')])[2]'.</msg>
-<arg>${XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:18.012761" elapsed="0.260365"/>
-</kw>
-<arg>(//label[contains(@class,'custom-control-label')])[2]</arg>
-<status status="PASS" start="2024-08-26T16:47:17.765399" elapsed="0.507727"/>
-</kw>
-<kw name="Cliquear elemento 1s" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH}</arg>
-<arg>1s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-26T16:47:18.274321" elapsed="0.230972"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:18.505548" level="INFO">Clicking element '//input[@id='dateOfBirthInput']'.</msg>
-<arg>${XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:18.505474" elapsed="0.292661"/>
-</kw>
-<arg>//input[@id='dateOfBirthInput']</arg>
-<status status="PASS" start="2024-08-26T16:47:18.273126" elapsed="0.525009"/>
-</kw>
-<kw name="Cliquear elemento 1s" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH}</arg>
-<arg>1s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-26T16:47:18.798135" elapsed="0.236032"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:19.034669" level="INFO">Clicking element '//div[contains(@class,'react-datepicker__day react-datepicker__day--026 react-datepicker__day--selected react-datepicker__day--today')]'.</msg>
-<arg>${XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:19.034669" elapsed="0.286803"/>
-</kw>
-<arg>//div[contains(@class,'react-datepicker__day react-datepicker__day--026 react-datepicker__day--selected react-datepicker__day--today')]</arg>
-<status status="PASS" start="2024-08-26T16:47:18.798135" elapsed="0.523337"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:19.323491" level="INFO">Executing JavaScript:
-window.scrollTo(0,200)
-Without any arguments.</msg>
-<arg>window.scrollTo(0,200)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-08-26T16:47:19.322475" elapsed="0.116948"/>
-</kw>
-<kw name="fill autocomplete" owner="Keywords_BasicForm">
-<kw name="Cliquear elemento 1s" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH}</arg>
-<arg>1s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-26T16:47:19.440711" elapsed="0.226120"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:19.667225" level="INFO">Clicking element '//div[@class='subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3']'.</msg>
-<arg>${XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:19.667225" elapsed="0.253233"/>
-</kw>
-<arg>${selector_principal}</arg>
-<status status="PASS" start="2024-08-26T16:47:19.440211" elapsed="0.480247"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:19.920959" level="INFO">Typing text 'Chemistry' into text field 'id=subjectsInput'.</msg>
-<arg>${selector}</arg>
-<arg>${opción}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:19.920959" elapsed="0.386390"/>
-</kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:20.307349" level="INFO">Sending key(s) ('ENTER',) to id=subjectsInput element.</msg>
-<msg time="2024-08-26T16:47:20.784695" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-08-26T16:47:20.784695" level="INFO">Releasing special key ENTER.</msg>
-<arg>${selector}</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-08-26T16:47:20.307349" elapsed="0.595234"/>
-</kw>
-<arg>//div[@class='subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3']</arg>
-<arg>id=subjectsInput</arg>
-<arg>Chemistry</arg>
-<status status="PASS" start="2024-08-26T16:47:19.439685" elapsed="1.462898"/>
-</kw>
-<kw name="Cliquear elemento 1s" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH}</arg>
-<arg>1s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-26T16:47:20.902583" elapsed="0.220885"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:21.123974" level="INFO">Clicking element '//label[@for='hobbies-checkbox-2'][contains(.,'Reading')]'.</msg>
-<arg>${XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:21.123468" elapsed="0.248725"/>
-</kw>
-<arg>//label[@for='hobbies-checkbox-2'][contains(.,'Reading')]</arg>
-<status status="PASS" start="2024-08-26T16:47:20.902583" elapsed="0.469610"/>
-</kw>
-<kw name="upload file" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${selector}</arg>
-<arg>3</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-26T16:47:21.372704" elapsed="0.232151"/>
-</kw>
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:21.605365" level="INFO">Sending D:\Users\yenifer.alfaro\Downloads\images.png to browser.</msg>
-<arg>${selector}</arg>
-<arg>${file_path}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:21.604855" elapsed="0.239548"/>
-</kw>
-<return>
-<value>El archivo se inserto correctamente</value>
-<status status="PASS" start="2024-08-26T16:47:21.844659" elapsed="0.000000"/>
-</return>
-<msg time="2024-08-26T16:47:21.845166" level="INFO">${t1} = El archivo se inserto correctamente</msg>
-<var>${t1}</var>
-<arg>css:input[type="file"]</arg>
-<arg>D:\\Users\\yenifer.alfaro\\Downloads\\images.png</arg>
-<status status="PASS" start="2024-08-26T16:47:21.372193" elapsed="0.472973"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${t1}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-08-26T16:47:21.845166" elapsed="0.000999"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:21.847166" level="INFO">Executing JavaScript:
-window.scrollTo(0,500)
-Without any arguments.</msg>
-<arg>window.scrollTo(0,500)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-08-26T16:47:21.846666" elapsed="0.104943"/>
-</kw>
-<kw name="Cliquear elemento 1s" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH}</arg>
-<arg>1s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-26T16:47:21.952110" elapsed="0.230172"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:22.182965" level="INFO">Clicking element '(//div[contains(@class,' css-1hwfws3')])[2]'.</msg>
-<arg>${XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:22.182282" elapsed="0.240289"/>
-</kw>
-<arg>(//div[contains(@class,' css-1hwfws3')])[2]</arg>
-<status status="PASS" start="2024-08-26T16:47:21.952110" elapsed="0.470461"/>
-</kw>
-<kw name="Cliquear elemento 1s" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${XPATH}</arg>
-<arg>1s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-26T16:47:22.423564" elapsed="0.236677"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:22.661224" level="INFO">Clicking element '//div[text()='Uttar Pradesh']'.</msg>
-<arg>${XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:22.660241" elapsed="0.248430"/>
-</kw>
-<arg>//div[text()='Uttar Pradesh']</arg>
-<status status="PASS" start="2024-08-26T16:47:22.423564" elapsed="0.485107"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-08-26T16:47:22.909697" level="INFO">Clicking button 'Xpath=//button[@type='submit']'.</msg>
-<arg>${SUBMIT_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-26T16:47:22.908671" elapsed="0.596809"/>
-</kw>
-<arg>Jesus</arg>
-<arg>Alfaro</arg>
-<arg>JAV@gmail.com</arg>
-<status status="PASS" start="2024-08-26T16:47:15.674833" elapsed="7.830647"/>
+<kw name="rellenar formulario">
+<status status="NOT RUN" start="2024-08-27T07:54:21.858360" elapsed="0.000000"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-26T16:47:25.506602" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-26T16:47:23.506397" elapsed="2.000205"/>
+<status status="NOT RUN" start="2024-08-27T07:54:21.858360" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-26T16:47:25.508650" elapsed="2.273461"/>
+<status status="NOT RUN" start="2024-08-27T07:54:21.859599" elapsed="0.000000"/>
 </kw>
 <doc>practica Nivel2 Keywords</doc>
 <tag>prueba_1</tag>
-<status status="PASS" start="2024-08-26T16:46:50.289051" elapsed="37.493561"/>
+<status status="FAIL" start="2024-08-27T07:54:21.855038" elapsed="0.004561">No keyword with name 'abrir Navegador' found.</status>
 </test>
-<status status="PASS" start="2024-08-26T16:46:50.132125" elapsed="37.651286"/>
+<status status="FAIL" start="2024-08-27T07:54:21.690758" elapsed="0.169830"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">prueba_1</stat>
+<stat pass="0" fail="1" skip="0">prueba_1</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Keyword">Keyword</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Keyword">Keyword</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-08-26T16:46:50.286920" level="WARN">Error in file 'D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\Keywords\Keywords_BasicForm.robot' on line 71: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2024-08-26T16:46:50.723762" level="WARN">The chromedriver version (126.0.6478.126) detected in PATH at C:\Chromedriver\chromedriver\chromedriver.exe might not be compatible with the detected chrome version (127.0.6533.120); currently, chromedriver 127.0.6533.119 is recommended for chrome 127.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-08-27T07:54:21.850708" level="ERROR">Error in file 'D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\level_2\Keyword.robot' on line 3: Error in file 'D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\Keywords\Keywords_BasicForm.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-08-27T07:54:21.853713" level="ERROR">Error in file 'D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\level_2\Keyword.robot' on line 5: Error in file 'D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\Keywords\Keywords_BasicForm.robot' on line 8: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>
