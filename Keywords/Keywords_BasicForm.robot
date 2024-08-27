@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${SUBMIT_BUTTON}    Xpath=//button[@type='submit']
 
-*** Test Cases ***
+#*** Test Cases ***
  #Practica 3 Formulario
     #[Documentation]     prueba
     #[Tags]      prueba_1
@@ -14,10 +14,10 @@ ${SUBMIT_BUTTON}    Xpath=//button[@type='submit']
 
 *** Keywords ***
 abrir navegador
-    [Arguments]    ${URL}     ${BROWSER}
+    [Arguments]    ${URL}     ${BROWSER}    ${TITLE}
     open browser    ${URL}     ${BROWSER}
     maximize browser window
-    title should be    DEMOQA
+    title should be    ${TITLE}
     set selenium implicit wait    10
     set selenium speed    .1s
 
@@ -39,7 +39,7 @@ llenar formulario
     click to element    //div[contains(@class,'react-datepicker__day react-datepicker__day--026 react-datepicker__day--selected react-datepicker__day--today')]     0.5
     #MANEJO DE FECHAS#
 
-    execute javascript    window.scrollTo(0,200)
+    scroll page     0   200
 
     #MANEJO DE AUTOCOMPLETE
     select autocomplete    //div[@class='subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3']    id=subjectsInput    Chemistry
@@ -53,7 +53,7 @@ llenar formulario
     upload file    css:input[type="file"]     D:\\Users\\yenifer.alfaro\\Downloads\\images.png
     #MANEJO DE UPLOAD
 
-    execute javascript    window.scrollTo(0,500)
+    scroll page     0   500
 
     #MANEJO DE DESPLEGABLES
     click to element    (//div[contains(@class,' css-1hwfws3')])[2]    1
@@ -78,3 +78,27 @@ select autocomplete
     click to element    ${SELECTOR_1}    1
     Input Text    ${SELECTOR_2}     ${OPTION}
     Press Keys    ${SELECTOR_2}     ENTER
+    #click element at coordinates   xpath=${SELECTOR_2}      0   50
+
+click submit
+    Click Button        ${SUBMIT_BUTTON}
+
+login
+    [Arguments]     ${USER}     ${PASS}     ${USER_V}     ${PASS_V}
+    input text    ${USER}      ${USER_V}
+    input text    ${PASS}      ${PASS_V}
+    click submit
+
+scroll page
+    [Arguments]    ${x}     ${y}
+    execute javascript    window.scrollTo(${x},${y})
+
+validar input
+    [Arguments]    ${selector}  ${value}
+    wait until element is visible   xpath=${selector}
+    wait until element is enabled   xpath=${selector}
+    element should be visible   xpath=${selector}
+    clear element text  xpath=${selector}
+    execute javascript    window.scrollTo(0,20)
+    input text   xpath=${selector}   ${value}
+    #capture element screenshot    ${selector}     ${rutafotos}${dato}.png

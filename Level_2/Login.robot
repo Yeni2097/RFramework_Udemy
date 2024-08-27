@@ -17,3 +17,9 @@ Practica Nivel2 Login
     [Tags]      TC1
     login      id=Email   id=Password    ${USER}     ${PASS}
     sleep    2
+
+
+
+
+
+
