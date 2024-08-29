@@ -1,537 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-28T12:22:27.676784" rpa="false" schemaversion="5">
-<suite id="s1" name="UploadExcel" source="D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\level_3\UploadExcel.robot">
-<test id="s1-t1" name="Practica Nivel3 Subida Excel" line="16">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-29T09:34:50.528755" rpa="false" schemaversion="5">
+<suite id="s1" name="Condicionales" source="D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\level_3\Condicionales.robot">
+<test id="s1-t1" name="Practica condicional" line="11">
+<kw name="Get Value From User" owner="Dialogs">
+<msg time="2024-08-29T09:34:51.830303" level="INFO">${nom} = ikjpo</msg>
+<var>${nom}</var>
+<arg>Dame tu nombre</arg>
+<doc>Pauses execution and asks user to input a value.</doc>
+<status status="PASS" start="2024-08-29T09:34:50.695315" elapsed="1.134988"/>
+</kw>
+<if>
+<branch type="IF" condition="'${nom}' == 'maria'">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Hola Maria</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-08-29T09:34:51.831348" elapsed="0.000000"/>
+</kw>
 <kw name="abrir navegador" owner="Keywords_BasicForm">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:22:28.125953" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
-<msg time="2024-08-28T12:22:47.934211" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Se ha forzado la interrupción de una conexión existente por el host remoto. (os error 10054)</msg>
-<msg time="2024-08-28T12:22:47.936342" level="WARN">The chromedriver version (126.0.6478.126) detected in PATH at C:\Chromedriver\chromedriver\chromedriver.exe might not be compatible with the detected chrome version (127.0.6533.120); currently, chromedriver  is recommended for chrome 127.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-28T12:22:28.124953" elapsed="44.111521"/>
+<status status="NOT RUN" start="2024-08-29T09:34:51.831958" elapsed="0.000000"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-28T12:23:12.236474" elapsed="0.039743"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:12.288760" level="INFO">Page title is 'The Internet'.</msg>
-<arg>${TITLE}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-08-28T12:23:12.276717" elapsed="0.012043"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>10</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2024-08-28T12:23:12.289207" elapsed="0.001833"/>
-</kw>
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>.1s</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-08-28T12:23:12.291540" elapsed="0.000500"/>
-</kw>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<arg>${TITLE}</arg>
-<status status="PASS" start="2024-08-28T12:22:28.124953" elapsed="44.167087"/>
-</kw>
-<kw name="Numero de Filas">
-<kw name="Numero Filas" owner="ReadExcel">
-<msg time="2024-08-28T12:23:12.294281" level="INFO">Esta entrando al num de filas****</msg>
-<msg time="2024-08-28T12:23:12.294601" level="INFO">${respuesta} = 5</msg>
-<var>${respuesta}</var>
-<arg>${hoja}</arg>
-<status status="PASS" start="2024-08-28T12:23:12.293120" elapsed="0.001481"/>
-</kw>
-<return>
-<value>${respuesta}</value>
-<status status="PASS" start="2024-08-28T12:23:12.294601" elapsed="0.000383"/>
-</return>
-<msg time="2024-08-28T12:23:12.294984" level="INFO">${filas} = 5</msg>
-<var>${filas}</var>
-<arg>Hoja1</arg>
-<doc>Utiliza el metodo de numero de filas de python</doc>
-<status status="PASS" start="2024-08-28T12:23:12.292540" elapsed="0.002444"/>
-</kw>
-<for flavor="IN RANGE">
-<iter>
-<kw name="Dato Por Columna" owner="ReadExcel">
-<msg time="2024-08-28T12:23:12.296485" level="INFO">${usuarios} = nombre 1</msg>
-<var>${usuarios}</var>
-<arg>Hoja1</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<status status="PASS" start="2024-08-28T12:23:12.295988" elapsed="0.000497"/>
-</kw>
-<kw name="Dato Por Columna" owner="ReadExcel">
-<msg time="2024-08-28T12:23:12.297573" level="INFO">${password} = 1234</msg>
-<var>${password}</var>
-<arg>Hoja1</arg>
-<arg>${i}</arg>
-<arg>2</arg>
-<status status="PASS" start="2024-08-28T12:23:12.296984" elapsed="0.000589"/>
-</kw>
-<kw name="Login with execel">
-<kw name="validar input" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:12.300565" elapsed="0.247939"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-08-28T12:23:12.549006" elapsed="0.336233"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:13.111511" level="INFO">Element 'xpath=//input[@name="username"]' is displayed.</msg>
-<arg>xpath=${selector}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:12.885419" elapsed="0.226092"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:13.111511" elapsed="0.255545"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:13.367564" level="INFO">Executing JavaScript:
-window.scrollTo(0,20)
-Without any arguments.</msg>
-<arg>window.scrollTo(0,20)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-08-28T12:23:13.367056" elapsed="0.108137"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:13.476192" level="INFO">Typing text 'nombre 1' into text field 'xpath=//input[@name="username"]'.</msg>
-<arg>xpath=${selector}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:13.475193" elapsed="0.406834"/>
-</kw>
-<arg>//input[@name="username"]</arg>
-<arg>${user}</arg>
-<status status="PASS" start="2024-08-28T12:23:12.299563" elapsed="1.583474"/>
-</kw>
-<kw name="validar input" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:13.883808" elapsed="0.236023"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-08-28T12:23:14.119831" elapsed="0.327882"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:14.672755" level="INFO">Element 'xpath=//input[@name="password"]' is displayed.</msg>
-<arg>xpath=${selector}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:14.448228" elapsed="0.224527"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:14.672755" elapsed="0.242295"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:14.916058" level="INFO">Executing JavaScript:
-window.scrollTo(0,20)
-Without any arguments.</msg>
-<arg>window.scrollTo(0,20)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-08-28T12:23:14.915050" elapsed="0.111467"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:15.027517" level="INFO">Typing text '1234' into text field 'xpath=//input[@name="password"]'.</msg>
-<arg>xpath=${selector}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:15.026517" elapsed="0.397678"/>
-</kw>
-<arg>//input[@name="password"]</arg>
-<arg>${pass}</arg>
-<status status="PASS" start="2024-08-28T12:23:13.883037" elapsed="1.541158"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:15.425297" level="INFO">Clicking element '//i[@class="fa fa-2x fa-sign-in"]'.</msg>
-<arg>//i[@class="fa fa-2x fa-sign-in"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:15.424195" elapsed="0.469336"/>
-</kw>
-<arg>${usuarios}</arg>
-<arg>${password}</arg>
-<doc>Se realiza un login extrayendo la data desde excel</doc>
-<status status="PASS" start="2024-08-28T12:23:12.298563" elapsed="3.594968"/>
-</kw>
-<var name="${i}">2</var>
-<status status="PASS" start="2024-08-28T12:23:12.295988" elapsed="3.597543"/>
-</iter>
-<iter>
-<kw name="Dato Por Columna" owner="ReadExcel">
-<msg time="2024-08-28T12:23:15.895531" level="INFO">${usuarios} = nombre 2</msg>
-<var>${usuarios}</var>
-<arg>Hoja1</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<status status="PASS" start="2024-08-28T12:23:15.894530" elapsed="0.001001"/>
-</kw>
-<kw name="Dato Por Columna" owner="ReadExcel">
-<msg time="2024-08-28T12:23:15.895531" level="INFO">${password} = 4567</msg>
-<var>${password}</var>
-<arg>Hoja1</arg>
-<arg>${i}</arg>
-<arg>2</arg>
-<status status="PASS" start="2024-08-28T12:23:15.895531" elapsed="0.000000"/>
-</kw>
-<kw name="Login with execel">
-<kw name="validar input" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:15.897520" elapsed="0.223120"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-08-28T12:23:16.120640" elapsed="0.349757"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:16.700252" level="INFO">Element 'xpath=//input[@name="username"]' is displayed.</msg>
-<arg>xpath=${selector}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:16.470397" elapsed="0.229855"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:16.700781" elapsed="0.238545"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:16.940227" level="INFO">Executing JavaScript:
-window.scrollTo(0,20)
-Without any arguments.</msg>
-<arg>window.scrollTo(0,20)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-08-28T12:23:16.939326" elapsed="0.108504"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:17.047830" level="INFO">Typing text 'nombre 2' into text field 'xpath=//input[@name="username"]'.</msg>
-<arg>xpath=${selector}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:17.047830" elapsed="0.391772"/>
-</kw>
-<arg>//input[@name="username"]</arg>
-<arg>${user}</arg>
-<status status="PASS" start="2024-08-28T12:23:15.896523" elapsed="1.543079"/>
-</kw>
-<kw name="validar input" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:17.440702" elapsed="0.220559"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-08-28T12:23:17.661261" elapsed="0.328588"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:18.214010" level="INFO">Element 'xpath=//input[@name="password"]' is displayed.</msg>
-<arg>xpath=${selector}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:17.989849" elapsed="0.224161"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:18.214010" elapsed="0.236286"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:18.451201" level="INFO">Executing JavaScript:
-window.scrollTo(0,20)
-Without any arguments.</msg>
-<arg>window.scrollTo(0,20)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-08-28T12:23:18.450700" elapsed="0.107873"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:18.558573" level="INFO">Typing text '4567' into text field 'xpath=//input[@name="password"]'.</msg>
-<arg>xpath=${selector}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:18.558573" elapsed="0.387614"/>
-</kw>
-<arg>//input[@name="password"]</arg>
-<arg>${pass}</arg>
-<status status="PASS" start="2024-08-28T12:23:17.439602" elapsed="1.506585"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:18.946738" level="INFO">Clicking element '//i[@class="fa fa-2x fa-sign-in"]'.</msg>
-<arg>//i[@class="fa fa-2x fa-sign-in"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:18.946738" elapsed="0.466878"/>
-</kw>
-<arg>${usuarios}</arg>
-<arg>${password}</arg>
-<doc>Se realiza un login extrayendo la data desde excel</doc>
-<status status="PASS" start="2024-08-28T12:23:15.896523" elapsed="3.517093"/>
-</kw>
-<var name="${i}">3</var>
-<status status="PASS" start="2024-08-28T12:23:15.894530" elapsed="3.519086"/>
-</iter>
-<iter>
-<kw name="Dato Por Columna" owner="ReadExcel">
-<msg time="2024-08-28T12:23:19.414620" level="INFO">${usuarios} = nombre 3</msg>
-<var>${usuarios}</var>
-<arg>Hoja1</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<status status="PASS" start="2024-08-28T12:23:19.414620" elapsed="0.000000"/>
-</kw>
-<kw name="Dato Por Columna" owner="ReadExcel">
-<msg time="2024-08-28T12:23:19.415528" level="INFO">${password} = 8910</msg>
-<var>${password}</var>
-<arg>Hoja1</arg>
-<arg>${i}</arg>
-<arg>2</arg>
-<status status="PASS" start="2024-08-28T12:23:19.414620" elapsed="0.000908"/>
-</kw>
-<kw name="Login with execel">
-<kw name="validar input" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:19.417077" elapsed="0.222044"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-08-28T12:23:19.639121" elapsed="0.335451"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:20.196965" level="INFO">Element 'xpath=//input[@name="username"]' is displayed.</msg>
-<arg>xpath=${selector}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:19.974572" elapsed="0.222393"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:20.196965" elapsed="0.235243"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:20.433217" level="INFO">Executing JavaScript:
-window.scrollTo(0,20)
-Without any arguments.</msg>
-<arg>window.scrollTo(0,20)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-08-28T12:23:20.432208" elapsed="0.107767"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:20.540978" level="INFO">Typing text 'nombre 3' into text field 'xpath=//input[@name="username"]'.</msg>
-<arg>xpath=${selector}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:20.539975" elapsed="0.398433"/>
-</kw>
-<arg>//input[@name="username"]</arg>
-<arg>${user}</arg>
-<status status="PASS" start="2024-08-28T12:23:19.416578" elapsed="1.521830"/>
-</kw>
-<kw name="validar input" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:20.938408" elapsed="0.224302"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-08-28T12:23:21.162710" elapsed="0.331467"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:21.716311" level="INFO">Element 'xpath=//input[@name="password"]' is displayed.</msg>
-<arg>xpath=${selector}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:21.494177" elapsed="0.222134"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:21.716311" elapsed="0.239605"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:21.955916" level="INFO">Executing JavaScript:
-window.scrollTo(0,20)
-Without any arguments.</msg>
-<arg>window.scrollTo(0,20)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-08-28T12:23:21.955916" elapsed="0.109004"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:22.064920" level="INFO">Typing text '8910' into text field 'xpath=//input[@name="password"]'.</msg>
-<arg>xpath=${selector}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:22.064920" elapsed="0.388576"/>
-</kw>
-<arg>//input[@name="password"]</arg>
-<arg>${pass}</arg>
-<status status="PASS" start="2024-08-28T12:23:20.938408" elapsed="1.515088"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:22.453496" level="INFO">Clicking element '//i[@class="fa fa-2x fa-sign-in"]'.</msg>
-<arg>//i[@class="fa fa-2x fa-sign-in"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:22.453496" elapsed="0.461050"/>
-</kw>
-<arg>${usuarios}</arg>
-<arg>${password}</arg>
-<doc>Se realiza un login extrayendo la data desde excel</doc>
-<status status="PASS" start="2024-08-28T12:23:19.416078" elapsed="3.498468"/>
-</kw>
-<var name="${i}">4</var>
-<status status="PASS" start="2024-08-28T12:23:19.413616" elapsed="3.500930"/>
-</iter>
-<iter>
-<kw name="Dato Por Columna" owner="ReadExcel">
-<msg time="2024-08-28T12:23:22.915521" level="INFO">${usuarios} = tomsmith</msg>
-<var>${usuarios}</var>
-<arg>Hoja1</arg>
-<arg>${i}</arg>
-<arg>1</arg>
-<status status="PASS" start="2024-08-28T12:23:22.914546" elapsed="0.000975"/>
-</kw>
-<kw name="Dato Por Columna" owner="ReadExcel">
-<msg time="2024-08-28T12:23:22.916598" level="INFO">${password} = SuperSecretPassword!</msg>
-<var>${password}</var>
-<arg>Hoja1</arg>
-<arg>${i}</arg>
-<arg>2</arg>
-<status status="PASS" start="2024-08-28T12:23:22.915521" elapsed="0.001077"/>
-</kw>
-<kw name="Login with execel">
-<kw name="validar input" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:22.918625" elapsed="0.224565"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-08-28T12:23:23.143190" elapsed="0.336075"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:23.702343" level="INFO">Element 'xpath=//input[@name="username"]' is displayed.</msg>
-<arg>xpath=${selector}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:23.479265" elapsed="0.223078"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:23.702343" elapsed="0.242282"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:23.945626" level="INFO">Executing JavaScript:
-window.scrollTo(0,20)
-Without any arguments.</msg>
-<arg>window.scrollTo(0,20)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-08-28T12:23:23.944625" elapsed="0.108253"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:24.052878" level="INFO">Typing text 'tomsmith' into text field 'xpath=//input[@name="username"]'.</msg>
-<arg>xpath=${selector}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:24.052878" elapsed="0.396499"/>
-</kw>
-<arg>//input[@name="username"]</arg>
-<arg>${user}</arg>
-<status status="PASS" start="2024-08-28T12:23:22.917608" elapsed="1.532267"/>
-</kw>
-<kw name="validar input" owner="Keywords_BasicForm">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:24.450878" elapsed="0.220141"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-08-28T12:23:24.671163" elapsed="0.329800"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:25.223250" level="INFO">Element 'xpath=//input[@name="password"]' is displayed.</msg>
-<arg>xpath=${selector}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-28T12:23:25.001273" elapsed="0.221977"/>
-</kw>
-<kw name="Clear Element Text" owner="SeleniumLibrary">
-<arg>xpath=${selector}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:25.223250" elapsed="0.236535"/>
-</kw>
-<kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:25.460775" level="INFO">Executing JavaScript:
-window.scrollTo(0,20)
-Without any arguments.</msg>
-<arg>window.scrollTo(0,20)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-08-28T12:23:25.459785" elapsed="0.106595"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:25.567136" level="INFO">Typing text 'SuperSecretPassword!' into text field 'xpath=//input[@name="password"]'.</msg>
-<arg>xpath=${selector}</arg>
-<arg>${value}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:25.566380" elapsed="0.396897"/>
-</kw>
-<arg>//input[@name="password"]</arg>
-<arg>${pass}</arg>
-<status status="PASS" start="2024-08-28T12:23:24.450378" elapsed="1.512899"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-28T12:23:25.964283" level="INFO">Clicking element '//i[@class="fa fa-2x fa-sign-in"]'.</msg>
-<arg>//i[@class="fa fa-2x fa-sign-in"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-28T12:23:25.963277" elapsed="0.469695"/>
-</kw>
-<arg>${usuarios}</arg>
-<arg>${password}</arg>
-<doc>Se realiza un login extrayendo la data desde excel</doc>
-<status status="PASS" start="2024-08-28T12:23:22.916598" elapsed="3.516904"/>
-</kw>
-<var name="${i}">5</var>
-<status status="PASS" start="2024-08-28T12:23:22.914546" elapsed="3.518956"/>
-</iter>
-<var>${i}</var>
-<value>2</value>
-<value>${filas}+1</value>
-<status status="PASS" start="2024-08-28T12:23:12.295485" elapsed="14.138017"/>
-</for>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-08-28T12:23:28.436303" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-08-28T12:23:26.434901" elapsed="2.001402"/>
+<status status="NOT RUN" start="2024-08-29T09:34:51.831958" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-28T12:23:28.436303" elapsed="2.210680"/>
+<status status="NOT RUN" start="2024-08-29T09:34:51.831958" elapsed="0.000000"/>
 </kw>
-<doc>practica Nivel3 Subida Excel</doc>
+<status status="NOT RUN" start="2024-08-29T09:34:51.830848" elapsed="0.001110"/>
+</branch>
+<branch type="ELSE IF" condition="'${nom}' == 'juan'">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Hola Juan</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-08-29T09:34:51.832556" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-08-29T09:34:51.832459" elapsed="0.000097"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>No te conozco</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-08-29T09:34:51.832556" elapsed="0.000537"/>
+</kw>
+<status status="PASS" start="2024-08-29T09:34:51.832556" elapsed="0.000537"/>
+</branch>
+<status status="PASS" start="2024-08-29T09:34:51.830848" elapsed="0.002245"/>
+</if>
+<doc>practica condicional</doc>
 <tag>TC1</tag>
-<status status="PASS" start="2024-08-28T12:22:28.123954" elapsed="62.523527"/>
+<status status="PASS" start="2024-08-29T09:34:50.694322" elapsed="1.139327"/>
 </test>
-<status status="PASS" start="2024-08-28T12:22:27.678785" elapsed="62.969713"/>
+<status status="PASS" start="2024-08-29T09:34:50.530755" elapsed="1.303553"/>
 </suite>
 <statistics>
 <total>
@@ -541,13 +62,9 @@ Without any arguments.</msg>
 <stat pass="1" fail="0" skip="0">TC1</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="UploadExcel">UploadExcel</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Condicionales">Condicionales</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-08-28T12:22:27.671922" level="WARN">Error in file 'D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\level_3\UploadExcel.robot' on line 41: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2024-08-28T12:22:27.672929" level="WARN">Error in file 'D:\Users\yenifer.alfaro\RF_Nivel1\RFramework_Udemy\level_3\UploadExcel.robot' on line 48: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
-<msg time="2024-08-28T12:22:47.934211" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: Se ha forzado la interrupción de una conexión existente por el host remoto. (os error 10054)</msg>
-<msg time="2024-08-28T12:22:47.936342" level="WARN">The chromedriver version (126.0.6478.126) detected in PATH at C:\Chromedriver\chromedriver\chromedriver.exe might not be compatible with the detected chrome version (127.0.6533.120); currently, chromedriver  is recommended for chrome 127.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
